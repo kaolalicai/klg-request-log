@@ -46,7 +46,7 @@ export function log (handle: Function) {
       const log: Log = {
         userId: userId,
         requestId: requestId,
-        httpMethod: ctx.httpMethod,
+        httpMethod: ctx.req.method,
         useTime: Date.now() - time,
         body: body,
         url: ctx.url,

@@ -13,6 +13,8 @@
     "pretest": "npm run lint"
   },
   "jest": {
+    "verbose": true,
+    "testURL": "http://localhost/",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -46,26 +48,28 @@
     "node": ">=8.9.0"
   },
   "dependencies": {
-    "@types/mongodb": "^3.0.10",
-    "mongodb": "^3.0.5",
-    "tracer": "^0.8.12"
+    "klg-log-model": "^1.0.1",
+    "klg-logger": "^2.0.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "tracer": "^0.8.15"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.0",
-    "@types/koa": "^2.0.45",
-    "@types/power-assert": "^1.4.29",
-    "@types/supertest": "^2.0.4",
-    "jest": "^22.4.2",
-    "koa": "^2.5.0",
-    "koa-bodyparser": "^4.2.0",
+    "@types/jest": "^22.2.3",
+    "@types/koa": "^2.0.46",
+    "@types/supertest": "^2.0.5",
+    "jest": "^22.4.4",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
-    "source-map-support": "^0.5.3",
-    "supertest": "^3.0.0",
-    "ts-jest": "^22.4.2",
+    "mongoose": "^5.2.8",
+    "source-map-support": "^0.5.8",
+    "supertest": "^3.1.0",
+    "ts-jest": "^22.4.6",
     "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
+    "tslint": "^5.11.0",
     "tslint-config-klg": "^1.0.4",
-    "typescript": "^2.7.2",
+    "typescript": "^2.9.2",
     "webstorm-disable-index": "^1.2.0"
   }
 }

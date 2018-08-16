@@ -2,7 +2,7 @@ import {Log} from './RequestLog'
 import * as moment from 'moment'
 import {cloneDeep, last} from 'lodash'
 import {EventEmitter} from 'events'
-import {MongoReport} from './MongoReport'
+import {LogCRUD, MongoReport} from './MongoReport'
 import {logger} from './Logger'
 
 const EVENT_KEY = 'KLG_REQUEST_LOG'
@@ -93,7 +93,7 @@ export class RequestLog extends EventEmitter {
     }
   }
 
-  registerMongoReporter (options: MongoReportOption) {
+  registerMongoReporter (options: MongoReportOption): LogCRUD {
     const name = options.collectionName || 'tracer'
     const suffix = moment().format('YYYY-MM')
     options.collectionName = name + suffix

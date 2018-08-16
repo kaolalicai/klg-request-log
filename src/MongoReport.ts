@@ -8,6 +8,8 @@ export interface MongoReportOption {
   collectionName?: string
 }
 
+export {LogCRUD}
+
 export class MongoReport {
   options: MongoReportOption
   crud: LogCRUD

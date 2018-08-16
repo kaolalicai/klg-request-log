@@ -94,9 +94,7 @@ export class RequestLog extends EventEmitter {
   }
 
   registerMongoReporter (options: MongoReportOption): LogCRUD {
-    const name = options.collectionName || 'tracer'
-    const suffix = moment().format('YYYY-MM')
-    options.collectionName = name + suffix
+    options.collectionName = options.collectionName || 'tracer'
     const mongo = new MongoReport(options)
     this.on(EVENT_KEY, (tracer: any) => {
       mongo.report(tracer).then(result => {

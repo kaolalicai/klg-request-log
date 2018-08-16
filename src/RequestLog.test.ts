@@ -64,6 +64,7 @@ const request = supertest.agent(server)
 describe('requestLog test', async function () {
 
   it(' test get request ', async () => {
+    await crud.model.remove({})
     const query = {a: 1, b: 3, c: 'sssss'}
     await request.get('/api/v1/hello').query(query).expect({msg: 'hello world'})
     const logObj = await crud.model.findOne()
@@ -101,7 +102,7 @@ describe('requestLog test', async function () {
     const body = {requestId: '123123123123123', b: 3, c: 'sssss'}
     await request.post('/error').send(body)
     const logObj = await crud.model.findOne()
-    await crud.model.remove({})
+    // await crud.model.remove({})
     expect(logObj)
     expect(logObj.userId).toEqual('none')
     expect(logObj.url).toEqual('/error')

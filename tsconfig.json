@@ -4,6 +4,7 @@
     "target": "es2017",
     "experimentalDecorators": true,
     "sourceMap": true,
+    "skipLibCheck": true,
     "outDir": "dist"
   },
   "include": [
